@@ -1,7 +1,10 @@
 pipeline {
+    agent any
     stages {
         stage('read author.txt') {
-            sh 'cat author.txt'
+            steps {
+                sh 'cat author.txt'
+            }
         }
     }
 }
